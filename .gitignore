@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+.Python
+bin
+lib
+include
+*.py[cod]
+venv/
+
+#JS
+.idea/
+node_modules/
