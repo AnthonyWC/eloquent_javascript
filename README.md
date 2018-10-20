@@ -1,7 +1,18 @@
-## Eloquent JavaScript Exercises
+### Eloquent JavaScript Exercises
 
-1. Join Slack channels [#eloquentjavascript](https://linkedin-jr-engineers.slack.com/messages/CDD6ZFLTS/)
+* Join Slack channels [#eloquentjavascript](https://linkedin-jr-engineers.slack.com/messages/CDD6ZFLTS/)
 
-2. Currently using eslint + [#ava](https://github.com/avajs/ava) as test runner.
+* Currently using eslint + [#ava](https://github.com/avajs/ava) as test runner (requires ES6/babel).
 
-### TODO: integrate /w CI/CD for testing in the future.
+#
+
+### Usage
+* Lint: npm run lint  -> eslint
+* Lint: npm run build -> babel
+* Test: npm run test  -> ava
+
+#
+
+### TODO: 
+
+integrate /w CI/CD (most likely CircleCI) for automated testing in the future.

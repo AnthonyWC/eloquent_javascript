@@ -13,10 +13,13 @@ function draw(k) {
     square += '#';
   }
 
-  return line;
+  return line.slice(0, -1);
 }
 
 module.exports = draw;
 
 //
-console.log(draw(7));
+
+if (require.main === module) {
+  console.log(draw(7));
+}

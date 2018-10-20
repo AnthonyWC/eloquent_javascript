@@ -6,5 +6,12 @@ module.exports = {
    },
   "rules": {
     'no-console': 'off',
+    "import/prefer-default-export": "off"
   },
+  "overrides": [{
+    "files": ["fizzbuzz.js", "test/**.js"],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  }]
 };
