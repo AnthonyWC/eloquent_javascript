@@ -25,7 +25,16 @@ function chess(l, w) {
     }
   }
 
-  return line;
+  return line.slice(0, -1);
 }
 
-console.info(chess(8, 8));
+module.exports = {
+  isInt,
+  chess,
+};
+
+//
+
+if (require.main === module) {
+  console.info(chess(3, 3));
+}
