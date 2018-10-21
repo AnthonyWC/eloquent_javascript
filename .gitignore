@@ -14,3 +14,4 @@ venv/
 #JS
 .idea/
 node_modules/
+package-lock.json

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { fizzbuzz } from '../babel/fizzbuzz';
+import { fizzbuzz } from '../babel/src/fizzbuzz';
 
 test('fizzbuzz', (t) => {
   t.is(fizzbuzz(1), '1');

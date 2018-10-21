@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { isInt, chess } from '../src/chess_v1';
+import { chess } from '../src/chess_v1';
 
 test('chess', (t) => {
   t.is(chess(1, 1), '| |');

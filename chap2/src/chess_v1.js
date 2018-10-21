@@ -36,5 +36,5 @@ module.exports = {
 //
 
 if (require.main === module) {
-  console.info(chess(3, 3));
+  console.info(chess(8, 8));
 }
