@@ -1,5 +1,3 @@
-// 'use strict';
-
 /*
 Testing for ES6 syntax
  */
@@ -18,16 +16,12 @@ const fizzbuzz = (n) => {
   while (i <= n) {
     if (divide(i, 3) && divide(i, 5)) {
       line = `${line}FizzBuzz\n`;
-      // console.log('FizzBuzz');
     } else if (divide(i, 3)) {
       line = `${line}Fizz\n`;
-      // console.log('Fizz');
     } else if (divide(i, 5)) {
       line = `${line}Buzz\n`;
-      // console.log('Buzz');
     } else {
       line = `${line + i}\n`;
-      // console.log(i);
     }
     i += 1;
   }

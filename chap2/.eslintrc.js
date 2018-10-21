@@ -6,7 +6,8 @@ module.exports = {
    },
   "rules": {
     'no-console': 'off',
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-plusplus": [2, { allowForLoopAfterthoughts: true }]
   },
   "overrides": [{
     "files": ["fizzbuzz.js", "test/**.js"],

@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.fizzbuzz = void 0;
 
-// 'use strict';
-
 /*
 Testing for ES6 syntax
  */
@@ -25,13 +23,13 @@ var fizzbuzz = function fizzbuzz(n) {
 
   while (i <= n) {
     if (divide(i, 3) && divide(i, 5)) {
-      line = "".concat(line, "FizzBuzz\n"); // console.log('FizzBuzz');
+      line = "".concat(line, "FizzBuzz\n");
     } else if (divide(i, 3)) {
-      line = "".concat(line, "Fizz\n"); // console.log('Fizz');
+      line = "".concat(line, "Fizz\n");
     } else if (divide(i, 5)) {
-      line = "".concat(line, "Buzz\n"); // console.log('Buzz');
+      line = "".concat(line, "Buzz\n");
     } else {
-      line = "".concat(line + i, "\n"); // console.log(i);
+      line = "".concat(line + i, "\n");
     }
 
     i += 1;
