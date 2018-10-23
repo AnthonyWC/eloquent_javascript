@@ -7,9 +7,14 @@
 #
 
 ### Usage
+
 * Lint: npm run lint  -> eslint
 * Lint: npm run build -> babel
 * Test: npm run test  -> ava
+
+* Specify the directory (chap#) using: DIR=chap#
+
+###### e.g. DIR=chap3 npm run lint 
 
 #
 

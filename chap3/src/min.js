@@ -14,7 +14,7 @@ function getmin(i, j) {
 
 if (require.main === module) {
   try {
-    eval(getmin(-0.61, 5));
+    console.log(getmin(8, 7));
   } catch (err) {
     if (err instanceof ReferenceError) {
       console.log('Reference error');
