@@ -20,4 +20,3 @@ rl.question('Enter 1st integer: ', (answer) => {
 //   console.log('foo');
 //   console.log(process.argv.length);
 // }
-

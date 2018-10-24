@@ -29,7 +29,6 @@ function chess(l, w) {
 }
 
 module.exports = {
-  isInt,
   chess,
 };
 

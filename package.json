@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "lint": "DIR=${DIR:-chap2}; eslint $DIR/src/*.js; file $DIR/babel | grep -q 'cannot open' || eslint $DIR/babel/*.js",
+    "lint": "DIR=${DIR:-chap2}; eslint $DIR/src/*.js; file $DIR/babel | grep -q 'cannot open' && echo 'no babel directory' || eslint $DIR/babel/*.js",
     "test": "DIR=${DIR:-chap2}; ava $DIR/test/test*.js --verbose",
-    "build": "DIR=${DIR:-chap2}; babel $DIR/babel/*.js -d $DIR/babel/src"
+    "build": "DIR=${DIR:-chap2}; file $DIR/babel | grep -q 'cannot open' && echo 'no babel directory' || babel $DIR/babel/*.js -d $DIR/babel/src"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
