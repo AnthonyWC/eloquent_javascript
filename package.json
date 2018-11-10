@@ -4,8 +4,9 @@
   "description": "Eloquent JS",
   "main": "",
   "scripts": {
-    "lint": "DIR=${DIR:-chap2}; $(npm bin)/eslint $DIR/src/*.js; file $DIR/babel | grep -q 'cannot open' && echo 'no babel directory' || eslint $DIR/babel/*.js",
-    "test": "DIR=${DIR:-chap2}; $(npm bin)/nyc ava $DIR/test/test*.js --verbose",
+    "lint": "DIR=${DIR:-chap2}; echo $DIR && $(npm bin)/nyc $(npm bin)/eslint $DIR/src/*.js",
+    "lint-babel": "DIR=${DIR:-chap2}; $(npm bin)/nyc $(npm bin)/eslint $DIR/babel/*.js; file $DIR/babel | grep -q 'cannot open' && echo 'no babel directory' || $(npm bin)/eslint $DIR/babel/*.js",
+    "test": "DIR=${DIR:-chap2}; $(npm bin)/nyc $(npm bin)/ava $DIR/test/test*.js --verbose",
     "build": "DIR=${DIR:-chap2}; file $DIR/babel | grep -q 'cannot open' && echo 'no babel directory' || babel $DIR/babel/*.js -d $DIR/babel/src"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "ava": "^0.25.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-ava": "^5.1.1",
     "eslint-plugin-import": "^2.14.0",
     "npm-run-all": "^4.1.3",
     "nyc": "^13.1.0"
