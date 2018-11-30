@@ -1,62 +1,42 @@
 'use strict';
 
-const arraytolist = (arr) => arr;
+function addElement(indict, value) {
+  // add new value
+  const newdict = { value };
 
-const TYPES = {
-  undefined: 'undefined',
-  number: 'number',
-  boolean: 'boolean',
-  string: 'string',
-  '[object Function]': 'function',
-  '[object RegExp]': 'regexp',
-  '[object Array]': 'array',
-  '[object Date]': 'date',
-  '[object Error]': 'error',
-};
-
-let TOSTRING = Object.prototype.toString;
-
-function checkType(obj) {
-  return TYPES[typeof obj] || TYPES[TOSTRING.call(obj)] || (obj ? 'object' : 'null');
-};
-
-class Node {
-  constructor(element) {
-    // check type
-    const type = checkType(element);
-
-    if ((type === 'string') || (type === 'number')) {
-      console.log('string or number');
-      this.value = element;
-      this.rest = null;
-    } else if (type === 'array') {
-      console.log('array');
-      let current = {};
-      this.value = null;
-      this.addElement(element);
-
-      addElement(element) {
-        const newNode = { value };
-        return this;
-      }
-
-      for (let i of element) {
-        console.log(i);
-        this.value = element;
-        this.rest = null;
-        current = this;
-        console.log(current);
-      }
-    } else {
-      console.log('non-valid input');
-    }
+  if (Object.keys(indict).length === 0) {
+    newdict.rest = null;
+  } else {
+    newdict.rest = indict;
   }
+  return newdict;
 }
 
-const list1 = new Node([1, 2]);
-// const list1 = new Node(1);
-// const list1 = new Node('hi');
-// const list1 = new LinkedList('hi');
 
-// console.log(arraytolist([1, 2]));
-console.log(list1);
+function arrayToList(arr = [1, 2, 3]) {
+  let dict = { };
+  const array = arr.reverse();
+
+  for (const e of array) {
+    dict = addElement(dict, e);
+  }
+
+  return dict;
+}
+
+/* eslint-disable */
+let dList = { value: 1, rest: {
+    value: 2, rest: {
+      value: 3,
+      rest: null,
+    }
+  }
+};
+/* eslint-disable */
+
+
+function listToarray(linkList = dList) {
+  let list = [];
+}
+
+console.log(arrayToList());
