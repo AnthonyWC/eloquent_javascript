@@ -21,6 +21,10 @@
 //   console.log(process.argv.length);
 // }
 
+/*
+Example Usage: range(1, 6, 2) -> [1, 2, 5]
+*/
+
 const range = (m, n, o = 1) => {
   const arr = [];
   if (m <= n) {

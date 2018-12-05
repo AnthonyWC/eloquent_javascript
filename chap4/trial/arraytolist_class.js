@@ -18,7 +18,7 @@ let TOSTRING = Object.prototype.toString;
 
 function checkType(obj) {
   return TYPES[typeof obj] || TYPES[TOSTRING.call(obj)] || (obj ? 'object' : 'null');
-};
+}
 
 class Node {
   constructor(element) {
